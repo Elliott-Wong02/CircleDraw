@@ -6,7 +6,7 @@ public class Drawing extends Canvas{
     Color c = new Color(0x992266);
     Point p_2 = new Point(0, 0);
     Color c_2 = new Color(49,27,59);
-    private Circle O = new Circle(p, c, 100);
+    private Circle O = new Circle(p, c, 200);
     private Rect R = new Rect(p_2, c_2, 100, 200);
     private Frame f;
     public Drawing(){
@@ -24,7 +24,7 @@ public class Drawing extends Canvas{
         setSize(400, 400);
     }
     public void paint(Graphics g){
-        Circle.draw(g);
-        Rect.draw(g);
+        O.draw(g);
+        R.draw(g);
     }
 }

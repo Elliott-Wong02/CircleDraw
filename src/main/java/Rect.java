@@ -1,10 +1,10 @@
 import java.awt.*;
 
 public class Rect {
-    private static int wid;
-    private static int hei;
-    private static Point pos;
-    private static Color col;
+    private int wid;
+    private int hei;
+    private Point pos;
+    private Color col;
 
     public Rect(Point initPos, Color col, int width, int height){
         wid = width;
@@ -12,7 +12,7 @@ public class Rect {
         pos = initPos;
         this.col = col;
     }
-    public static void draw(Graphics g){
+    public void draw(Graphics g){
         g.setColor(col);
         g.fillRect(pos.x, pos.y, wid, hei);
     }
