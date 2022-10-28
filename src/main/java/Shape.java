@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public abstract class Shape {
+public abstract class Shape implements Draw {
     protected Point pos;
     protected Color col;
 
@@ -9,5 +9,4 @@ public abstract class Shape {
         this.col = col;
     }
 
-    public abstract void draw(Graphics g);
 }

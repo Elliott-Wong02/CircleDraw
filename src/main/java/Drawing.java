@@ -1,15 +1,16 @@
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+
 public class Drawing extends Canvas{
-    Point p = new Point(200, 200);
-    Color c = new Color(0x992266);
-    Point p_2 = new Point(0, 0);
-    Color c_2 = new Color(49,27,59);
-    private Circle O = new Circle(p, c, 200);
-    private Rect R = new Rect(p_2, c_2, 100, 200);
+    private ArrayList<Shape> shapes = new ArrayList<Shape>();
     private Frame f;
     public Drawing(){
+        shapes.add(new Circle(new Point(100,100), new Color(0x992266), 100));
+        shapes.add(new Rect(new Point(0,0), new Color(29,100,57), 100, 300));
+        shapes.add(new Square(new Point(50, 50), new Color(39, 23, 245), 50));
+
         setupFrame();
         f.addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent e){
@@ -33,7 +34,8 @@ public class Drawing extends Canvas{
     }
 
     public void paint(Graphics g){
-        O.draw(g);
-        R.draw(g);
+        for (int i=0; i< shapes.size(); i++){
+            shapes.get(i).draw(g);
+        }
     }
 }
