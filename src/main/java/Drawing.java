@@ -1,10 +1,15 @@
+import shapes.Circle;
+import shapes.Rect;
+import shapes.Shape;
+import shapes.Square;
+
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 public class Drawing extends Canvas{
-    private ArrayList<Shape> shapes = new ArrayList<Shape>();
+    private ArrayList<shapes.Shape> shapes = new ArrayList<Shape>();
     private Frame f;
     public Drawing(){
         shapes.add(new Circle(new Point(100,100), new Color(0x992266), 100));
